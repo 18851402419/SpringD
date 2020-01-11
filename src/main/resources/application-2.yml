@@ -1,0 +1,16 @@
+server:
+  servlet:
+    context-path: /memeda
+  port: 8081
+
+# 此处冒号后要留空格
+height: 180cm
+name: 贡子哥
+age: 21
+
+content: "name: ${name} age: ${age}"
+
+people:
+  name: Tian
+  age: 18
+  height: 168cm

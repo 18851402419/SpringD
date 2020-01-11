@@ -1,0 +1,33 @@
+server:
+  servlet:
+    context-path: /memeda
+  port: 8081
+
+## 此处冒号后要留空格
+    ##height: 180cm
+    ##name: 贡子哥
+    ##age: 21
+    ##
+    ##content: "name: ${name} age: ${age}"
+    ##
+    ##people:
+    ##  name: 金咕咕
+  ##  age: 25
+  ##  height: 170cm
+
+# 此处相当于在application.yml中调用application-1.yml配置文件
+spring:
+  profiles:
+    active: 1
+#  要先在MySQL建数据库然后才可以注入
+#   1.一开始ddl-auto使用create
+#   2.url写完数据库名称后加上serverTimezone=GMT更改时区
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
